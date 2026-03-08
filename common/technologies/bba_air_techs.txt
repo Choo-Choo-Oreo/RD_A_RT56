@@ -1,5 +1,107 @@
 technologies = {
 	
+	# MM: This constants are here because I am not a **** savage
+	@transport_plane_x = 1
+	@mothership_x_bba = 3
+	@mothership_x = 3
+
+	bba_early_transport_plane = {
+
+		enable_equipments = {
+			transport_plane_equipment_1
+		}
+	
+		path = {
+			leads_to_tech = bba_improved_transport_plane
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1933
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = @transport_plane_x y = 2 } 
+		}
+		
+		categories = {
+			air_equipment
+			transport_planes_cat
+		}
+		special_project_specialization = { specialization_air }
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+
+	bba_improved_transport_plane = {
+
+		enable_equipments = {
+			transport_plane_equipment_2
+		}
+	
+		path = {
+			leads_to_tech = bba_strategic_airlifter
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1940
+		
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = @transport_plane_x y = 6 } 
+		}
+		
+		categories = {
+			air_equipment
+			transport_planes_cat
+		}
+		special_project_specialization = { specialization_air }
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+
+	bba_strategic_airlifter = {
+
+		enable_equipments = {
+			transport_plane_equipment_3
+		}
+		
+		research_cost = 2
+		start_year = 1945
+		
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = @transport_plane_x y = 12 } 
+		}
+		
+		categories = {
+			air_equipment
+			transport_planes_cat
+		}
+		special_project_specialization = { specialization_air }
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
 	iw_small_airframe = {
 
 		enable_equipments = {
@@ -13,6 +115,9 @@ technologies = {
 			cv_small_plane_suicide_airframe_0
 		}
 		
+		enable_equipment_modules = {
+			open_canopy
+		}		
 	
 		path = {
 			leads_to_tech = basic_small_airframe
@@ -39,14 +144,20 @@ technologies = {
 			mio_cat_all_naval_bomber_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 
 		
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			
 			modifier = {
 				factor = 2
 				is_major = yes
+			}
+
+			modifier = {
+				num_of_military_factories < 7
+				factor = 0.1
 			}
 		}
 	}
@@ -65,7 +176,9 @@ technologies = {
 			cv_small_plane_naval_bomber_airframe_1
 			cv_small_plane_suicide_airframe_1
 		}
-	
+		enable_equipment_modules = {
+			birdcage_canopy
+		}	
 		path = {
 			leads_to_tech = improved_small_airframe
 			research_cost_coeff = 1
@@ -91,7 +204,7 @@ technologies = {
 			mio_cat_all_naval_bomber_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
-		
+		special_project_specialization = { specialization_air }
 		
 		
 		ai_will_do = {
@@ -143,19 +256,22 @@ technologies = {
 			leads_to_tech = advanced_small_airframe
 			research_cost_coeff = 1
 		}
-				
-
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_jet_engine	
+			}
+		}	
+		enable_equipment_modules = {
+			malcom_hood_canopy
+		}
+		
 		research_cost = 2
 		start_year = 1940
 		folder = {
 			name = bba_air_techs_folder
 			position = { x = 0 y = 6 }
-		}
-		folder = {
-			name = secret_weapons_folder
-			position = { x = 6 y = 8 }
-		}
-		
+		}		
 		categories = {
 			light_air
 			light_fighter
@@ -168,10 +284,10 @@ technologies = {
 			mio_cat_all_naval_bomber_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 2
-			
 			modifier = {
 				factor = 100
 				has_tech_bonus = {
@@ -186,13 +302,13 @@ technologies = {
 				factor = 50
 				is_major = yes
 			}
-
+			
 			modifier = {
 				factor = 0
 				original_tag = GER
 				date < "1941.1.1"
 			}
-
+			
 			modifier = {
 				factor = 1.2
 				date > "1941.1.1"
@@ -232,7 +348,15 @@ technologies = {
 			leads_to_tech = modern_small_airframe
 			research_cost_coeff = 1
 		}
-		
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_axial_jet_engine	
+			}
+		}			
+		enable_equipment_modules = {
+			bubble_canopy
+		}		
 		research_cost = 2
 		start_year = 1944
 
@@ -253,6 +377,7 @@ technologies = {
 			mio_cat_all_naval_bomber_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 2
@@ -290,6 +415,14 @@ technologies = {
 	
 	modern_small_airframe = {
 
+		allow = { 	 		
+			ROOT = {
+				is_special_project_completed = sp:sp_air_jet_engine
+			} 
+		}
+
+		is_special_project_tech = yes
+
 		enable_equipments = {
 			small_plane_airframe_4
 			small_plane_cas_airframe_4
@@ -300,11 +433,10 @@ technologies = {
 			cv_small_plane_naval_bomber_airframe_4
 			cv_small_plane_suicide_airframe_4
 		}
-
-		dependencies = {
-			jet_engines = 1
-		}
-		
+		path = {
+			leads_to_tech = fox1_rocket_tech
+			research_cost_coeff = 2
+		}		
 		research_cost = 2
 		start_year = 1945
 
@@ -326,6 +458,7 @@ technologies = {
 			mio_cat_all_naval_bomber_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 
 		ai_will_do = {
 			factor = 1
@@ -340,12 +473,35 @@ technologies = {
 		}
 	}
 	
+	supersonic_small_airframe = { #supersonic
+
+		allow = { always = no }
+
+		enable_equipments = {
+			small_plane_airframe_5
+		}
+		
+		research_cost = 2
+		start_year = 1950
+		
+		categories = {
+			light_air
+			light_fighter
+		}
+		special_project_specialization = { specialization_air }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
 	iw_medium_airframe = {
 
 		enable_equipments = {
 			medium_plane_airframe_0
 			medium_plane_fighter_airframe_0
 			medium_plane_scout_plane_airframe_0
+			transport_plane_equipment_1			
 		}
 
 		path = {
@@ -367,9 +523,15 @@ technologies = {
 			air_equipment
 			mio_cat_all_medium_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
+
+			modifier = {
+				num_of_military_factories < 15
+				factor = 0.1
+			}
 		}
 	}
 	
@@ -401,6 +563,7 @@ technologies = {
 			air_equipment
 			mio_cat_all_medium_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
@@ -443,7 +606,12 @@ technologies = {
 			leads_to_tech = advanced_medium_airframe
 			research_cost_coeff = 1
 		}
-		
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_jet_engine	
+			}
+		}		
 		research_cost = 2
 		start_year = 1940
 		folder = {
@@ -458,6 +626,7 @@ technologies = {
 			air_equipment
 			mio_cat_all_medium_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
@@ -504,7 +673,12 @@ technologies = {
 			leads_to_tech = modern_medium_airframe
 			research_cost_coeff = 1
 		}
-
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_axial_jet_engine	
+			}
+		}
 		research_cost = 2
 		start_year = 1944
 		folder = {
@@ -519,6 +693,7 @@ technologies = {
 			air_equipment
 			mio_cat_all_medium_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
@@ -545,16 +720,20 @@ technologies = {
 	
 	modern_medium_airframe = {
 
+		allow = { 	 		
+			ROOT = {
+				is_special_project_completed = sp:sp_air_jet_engine
+			} 
+		}
+
+		is_special_project_tech = yes
+
 		enable_equipments = {
 			medium_plane_airframe_4
 			medium_plane_fighter_airframe_4
 			medium_plane_scout_plane_airframe_4
 		}
 		
-		dependencies = {
-			jet_engines = 1
-		}
-
 		research_cost = 2
 		start_year = 1945
 		
@@ -570,6 +749,7 @@ technologies = {
 			tactical_bomber
 			mio_cat_all_medium_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
@@ -585,6 +765,7 @@ technologies = {
 		enable_equipments = {
 			large_plane_airframe_0
 			large_plane_maritime_patrol_plane_airframe_0
+			transport_plane_equipment_1			
 		}
 	
 		path = {
@@ -605,9 +786,15 @@ technologies = {
 			cat_strategic_bomber
 			mio_cat_all_heavy_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
+
+			modifier = {
+				num_of_military_factories < 30
+				factor = 0.1
+			}
 			
 			modifier = {
 				factor = 5
@@ -615,8 +802,9 @@ technologies = {
 			}
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				tag = USA
+				date > 1937.1.1
 			}
 		}
 	}
@@ -646,6 +834,7 @@ technologies = {
 			cat_strategic_bomber
 			mio_cat_all_heavy_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
@@ -664,6 +853,19 @@ technologies = {
 	
 	improved_large_airframe = {
 
+		on_research_complete = {
+			if = {
+				limit = { has_dlc = "Gotterdammerung"}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_air_intercontinental_bomber	
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_air_mothership_aircraft	
+				}						
+			}
+		}
 		enable_equipments = {
 			large_plane_airframe_2
 			large_plane_maritime_patrol_plane_airframe_2
@@ -671,6 +873,11 @@ technologies = {
 	
 		path = {
 			leads_to_tech = advanced_large_airframe
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = reinforced_wings_mothership
 			research_cost_coeff = 1
 		}
 		
@@ -687,6 +894,7 @@ technologies = {
 			cat_strategic_bomber
 			mio_cat_all_heavy_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
@@ -728,6 +936,7 @@ technologies = {
 			cat_strategic_bomber
 			mio_cat_all_heavy_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
@@ -746,17 +955,21 @@ technologies = {
 	
 	modern_large_airframe = {
 
+		allow = { 	 		
+			ROOT = {
+				is_special_project_completed = sp:sp_air_jet_engine
+			} 
+		}
+
+		is_special_project_tech = yes
+
 		enable_equipments = {
 			large_plane_airframe_4
 			large_plane_maritime_patrol_plane_airframe_4
 		}
 		
 		research_cost = 2
-		start_year = 1950
-
-		dependencies = {
-			jet_engines = 1
-		}
+		start_year = 1945
 
 		folder = {
 			name = bba_air_techs_folder
@@ -769,6 +982,7 @@ technologies = {
 			cat_strategic_bomber
 			mio_cat_all_heavy_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
@@ -783,23 +997,24 @@ technologies = {
 	}
 
 	early_bombs = {
-
 		enable_equipment_modules = {
-			bomb_locks
-			small_bomb_bay
-			medium_bomb_bay
-			large_bomb_bay
+					bomb_locks
+					small_bomb_bay
+					medium_bomb_bay
+					large_bomb_bay
 					torpedo_mounting
-			medium_bomb_bay_cluster_bombs
-			small_cluster_bombs
+					medium_bomb_bay_cluster_bombs
+					small_cluster_bombs
+					incendiary_bombs_strat
+					incendiary_bombs_medium
 		}
-		
+			
 		research_cost = 1
 		start_year = 1922
 
 		folder = {
 			name = bba_air_techs_folder
-			position = { x = 0 y = 2 }
+			position = { x = -1 y = 2 }
 		}
 
 		path = {
@@ -825,6 +1040,7 @@ technologies = {
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
@@ -843,12 +1059,31 @@ technologies = {
 					heavy_bomb_locks
 		}
 			
+		on_research_complete = { 
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_bouncing_bomb
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_earthshaker_bomb	
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = new_sp_air_bouncing_bomb
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = new_sp_air_earthshaker_bomb	
+			}			
+		}
+			
 		research_cost = 1
 		start_year = 1940
 
 		folder = {
 			name = bba_air_techs_folder
-			position = { x = 1 y = 6 }
+			position = { x = 0 y = 4 }
 		}
 		
 		categories = {
@@ -859,6 +1094,7 @@ technologies = {
 			mio_cat_all_medium_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
@@ -884,7 +1120,7 @@ technologies = {
 
 		folder = {
 			name = bba_air_techs_folder
-			position = { x = 2 y = 2 }
+			position = { x = -2 y = 4 }
 		}
 		
 		categories = {
@@ -895,6 +1131,125 @@ technologies = {
 			mio_cat_all_medium_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					has_tech = iw_small_airframe
+					has_tech = iw_medium_airframe
+					has_tech = iw_large_airframe
+				}
+				factor = 5
+			}
+		}
+	}	
+
+	photo_reconnaisance = {
+		enable_equipment_modules = {
+			recon_camera
+		}
+		
+		research_cost = 1
+		start_year = 1922
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = -3.2 y = 2 }
+		}
+
+
+		allow_branch = { has_dlc = "La Resistance" }
+		
+		categories = {
+			air_equipment
+			plane_modules_tech
+			mio_cat_all_medium_aircraft_and_modules
+		}
+		special_project_specialization = { specialization_air }
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					has_tech = basic_medium_airframe
+				}
+				factor = 5
+			}
+		}
+	}
+
+	air_torpedoe_1 = {
+		enable_equipment_modules = {
+			torpedo_mounting
+		}
+			
+		research_cost = 1
+		start_year = 1922
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = -6 y = 2 }
+		}
+
+		path = {
+			leads_to_tech = air_torpedoe_2
+			research_cost_coeff = 1
+		}
+		
+		categories = {
+			air_equipment
+			plane_modules_tech
+			cat_air_bombs
+			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}
+		special_project_specialization = { specialization_air }
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				OR = {
+					has_tech = iw_small_airframe
+					has_tech = iw_medium_airframe
+					has_tech = iw_large_airframe
+				}
+				factor = 5
+			}
+		}
+	}
+
+	air_torpedoe_2 = {
+		enable_equipment_modules = {
+			torpedo_mounting_2
+		}
+			
+		research_cost = 1
+		start_year = 1940
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = -6 y = 6 }
+		}
+
+		path = {
+			leads_to_tech = air_torpedoe_3
+			research_cost_coeff = 1
+		}
+		
+		categories = {
+			air_equipment
+			plane_modules_tech
+			cat_air_bombs
+			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
@@ -908,93 +1263,38 @@ technologies = {
 			}
 		}
 	}
-	rocket_rails = {
-		enable_equipment_modules = {
-		rocket_rails
-		}
 
+	air_torpedoe_3 = {
+		enable_equipment_modules = {
+			torpedo_mounting_3
+		}
+			
 		research_cost = 1
-		start_year = 1938
+		start_year = 1944
 
 		folder = {
 			name = bba_air_techs_folder
-			position = { x = 0 y = 4 }
+			position = { x = -6 y = 8 }
 		}
-		
+
 		categories = {
 			air_equipment
 			plane_modules_tech
 			cat_air_bombs
-			mio_cat_all_cas_and_modules
+			mio_cat_all_naval_bomber_and_modules
 			mio_cat_all_medium_aircraft_and_modules
-			mio_cat_all_light_aircraft_and_modules
-		}		
-		
-		path = {
-			leads_to_tech = rocket_rails_2
-			research_cost_coeff = 1
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				tag = SOV
-				factor = 50
-			}
-			modifier = {
-				tag = ENG
-				factor = 50
-			}			
-		}		
-	}
-	rocket_rails_2 = {
-		enable_equipment_modules = {
-		rocket_rails_2
-		}
-
-		research_cost = 1
-		start_year = 1942
-
-		folder = {
-			name = bba_air_techs_folder
-			position = { x = 0 y = 8 }
-		}
-		
-		categories = {
-			air_equipment
-			plane_modules_tech
-			cat_air_bombs
-			mio_cat_all_cas_and_modules
-			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
-		
-	}	
-	photo_reconnaisance = {
-		enable_equipment_modules = {
-			recon_camera
-		}
-		
-		research_cost = 1
-		start_year = 1922
-
-		folder = {
-			name = bba_air_techs_folder
-			position = { x = 0 y = 2 }
-		}
-
-		allow_branch = { has_dlc = "La Resistance" }
-		
-		categories = {
-			air_equipment
-			plane_modules_tech
-			mio_cat_all_medium_aircraft_and_modules
-		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				OR = {
-					has_tech = basic_medium_airframe
+					has_tech = iw_small_airframe
+					has_tech = iw_medium_airframe
+					has_tech = iw_large_airframe
 				}
 				factor = 5
 			}
@@ -1008,6 +1308,8 @@ technologies = {
 			light_mg_4x
 			lmg_defense_turret
 			lmg_defense_turret_2x
+			rear_lmg_post
+						
 		}
 		
 		research_cost = 1
@@ -1027,7 +1329,7 @@ technologies = {
 			leads_to_tech = aa_cannon_1
 			research_cost_coeff = 1
 		}
-
+		
 		categories = {
 			air_equipment
 			plane_modules_tech
@@ -1037,6 +1339,7 @@ technologies = {
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
@@ -1060,6 +1363,9 @@ technologies = {
 			armor_plate_small
 			armor_plate_medium
 			armor_plate_large
+			armored_windscreen
+			armored_windscreen_medium	
+			armored_windscreen_large			
 			auto_extinguisher_system_small
 			auto_extinguisher_system_medium
 			auto_extinguisher_system_large
@@ -1072,7 +1378,10 @@ technologies = {
 			name = bba_air_techs_folder
 			position = { x = -3 y = 4 }
 		}
-
+		path = {
+			leads_to_tech = ecm_systems_tech
+			research_cost_coeff = 1
+		}
 		categories = {
 			air_equipment
 			plane_modules_tech
@@ -1081,12 +1390,13 @@ technologies = {
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 			modifier = {
 				is_major = yes
-				factor = 100
+				factor = 200
 			}			
 			modifier = {
 				date > "1937.1.1"
@@ -1105,7 +1415,7 @@ technologies = {
 				factor = 3
 			}
 		}
-	}
+	}	
 
 	aa_hmg = {
 
@@ -1114,6 +1424,7 @@ technologies = {
 			heavy_mg_4x
 			hmg_defense_turret
 			hmg_defense_turret_2x
+			rear_hmg_post			
 		}
 		
 		research_cost = 1
@@ -1121,7 +1432,7 @@ technologies = {
 
 		folder = {
 			name = bba_air_techs_folder
-			position = { x = 1 y = 5 }
+			position = { x = 1 y = 6 }
 		}
 
 		path = {
@@ -1138,6 +1449,7 @@ technologies = {
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
+		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
 			factor = 1
@@ -1146,53 +1458,6 @@ technologies = {
 					has_tech = basic_small_airframe
 					has_tech = basic_medium_airframe
 					has_tech = basic_large_airframe
-				}
-				factor = 5
-			}
-			modifier = {
-				OR = {
-					tag = USA
-					tag = GER
-					tag = SOV
-					tag = JAP
-				}
-				factor = 30
-			}
-		}
-	}
-
-	aa_hmg_2 = {
-
-		enable_equipment_modules = {
-			imp_heavy_mg_2x
-			imp_heavy_mg_4x			
-		}
-		
-		research_cost = 1
-		start_year = 1943
-
-		folder = {
-			name = bba_air_techs_folder
-			position = { x = 1 y = 8 }
-		}
-
-		categories = {
-			air_equipment
-			plane_modules_tech
-			cat_air_guns
-			mio_cat_all_light_fighter_and_modules
-			mio_cat_all_medium_aircraft_and_modules
-			mio_cat_all_heavy_aircraft_and_modules
-			mio_cat_all_light_aircraft_and_modules
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = improved_small_airframe
-					has_tech = improved_medium_airframe
-					has_tech = improved_large_airframe
 				}
 				factor = 5
 			}
@@ -1221,7 +1486,7 @@ technologies = {
 
 		folder = {
 			name = bba_air_techs_folder
-			position = { x = -1 y = 5 }
+			position = { x = -1 y = 6 }
 		}
 		path = {
 			leads_to_tech = aa_cannon_2
@@ -1236,7 +1501,7 @@ technologies = {
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
-		
+		special_project_specialization = { specialization_air }		
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -1287,7 +1552,7 @@ technologies = {
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
-		
+		special_project_specialization = { specialization_air }		
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -1357,7 +1622,7 @@ technologies = {
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
-		
+		special_project_specialization = { specialization_air }		
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -1398,11 +1663,16 @@ technologies = {
 			engine_2_2x
 			engine_2_3x
 			engine_2_4x
-			engine_2_6x	
+			engine_2_6x
 			early_supercharger
 			early_turbocharger			
 		}
-		
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_jet_engine	
+			}
+		}		
 		research_cost = 1
 		start_year = 1936
 
@@ -1427,7 +1697,7 @@ technologies = {
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
-		
+		special_project_specialization = { specialization_air }		
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -1467,7 +1737,12 @@ technologies = {
 			water_injection_medium
 			water_injection_large
 		}
-		
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_axial_jet_engine	
+			}
+		}		
 		research_cost = 1.5
 		start_year = 1940
 
@@ -1492,7 +1767,7 @@ technologies = {
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
-		
+		special_project_specialization = { specialization_air }		
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -1551,6 +1826,10 @@ technologies = {
 			name = bba_air_techs_folder
 			position = { x = -1 y = 8 }
 		}
+		path = {
+			leads_to_tech = sp_centrifugal_jet_tech
+			research_cost_coeff = 1
+		}
 		categories = {
 			air_equipment
 			plane_modules_tech
@@ -1562,7 +1841,7 @@ technologies = {
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
-		
+		special_project_specialization = { specialization_air }		
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -1596,6 +1875,584 @@ technologies = {
 		}
 	}
 
+	range_improvements = {
+
+		enable_equipment_modules = {
+			fuel_tanks_small
+			fuel_tanks_medium
+			fuel_tanks_large
+			drop_tanks_75
+			drop_tanks_108
+			drop_tanks_165
+			drop_tanks_75_x2
+			drop_tanks_108_x2
+			drop_tanks_165_x2
+		}
+		
+		research_cost = 1
+		start_year = 1936
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = -5 y = 4 }
+		}
+
+		categories = {
+			air_equipment
+			plane_modules_tech
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_cas_and_modules
+			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}
+		special_project_specialization = { specialization_air }		
+		ai_will_do = {
+			factor = 500
+			modifier = {
+				is_major = yes
+				factor = 200
+			}
+			modifier = {
+				num_of_military_factories < 10
+				factor = 0
+			}
+			modifier = {
+				date > "1937.1.1"
+				factor = 1.5
+			}
+			modifier = {
+				date > "1938.1.1"
+				factor = 1.5
+			}
+			modifier = {
+				date > "1939.1.1"
+				factor = 3
+			}
+			modifier = {
+				OR = {
+					tag = USA
+					tag = JAP
+				}
+				factor = 3
+			}
+		}
+	}
+
+	aircraft_construction = {
+
+		enable_equipment_modules = {
+			dive_brakes_small
+			dive_brakes_medium
+			non_strategic_materials_small
+			floats
+			non_strategic_materials_medium
+			flying_boat_medium
+			non_strategic_materials_large
+			flying_boat_large
+			pressurized_cockpit	
+			aircraft_lightweight_construction_small	
+			aircraft_lightweight_construction_medium
+			aircraft_reinforced_construction_small
+			aircraft_reinforced_construction_medium
+			aircraft_reinforced_construction_large			
+			aerodynamic_pylons_small
+			aerodynamic_pylons_medium			
+			cargo_bay
+			supply_drops
+			troop_compartment
+			NACA_cowling			
+		}
+		
+		research_cost = 1
+		start_year = 1922
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = -4 y = 2 }
+		}
+
+		path = {
+			leads_to_tech = range_improvements
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = survivability_studies
+			research_cost_coeff = 1
+		}		
+
+		categories = {
+			air_equipment
+			plane_modules_tech
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_cas_and_modules
+			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}
+		special_project_specialization = { specialization_air }		
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				is_major = yes
+				factor = 100
+			}			
+		}
+	}
+	
+	suicide_charge = {
+
+		enable_equipment_modules = {
+			fixed_explosive_charge
+		}
+				
+		research_cost = 1.5 #Carrier Variant
+		start_year = 1944
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		#folder = {
+		#	name = air_techs_folder
+		#	position = { x = -2 y = 8 }
+		#}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		################
+	}
+
+
+	##### SPECIAL PROJECTS #####
+
+	sp_centrifugal_jet_tech = {
+		allow_branch = {
+			has_dlc = "Gotterdammerung"
+		}
+		
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_air_jet_engine
+			} 
+		}
+
+		is_special_project_tech = yes
+
+		research_cost = 2
+		start_year = 1945
+		
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 0 y = 12 }
+		}
+
+		folder = {
+			name = air_techs_folder
+			position = { x = 4 y = 12 }
+		}
+		
+		categories = {
+			jet_technology
+			cat_air_engine
+			helicopter_tech
+		}
+
+		category_helicopter_support_companies = {
+			fuel_consumption = -0.05
+			maximum_speed = 0.1
+			defense = 0.05
+			breakthrough = 0.05
+		}
+
+		special_project_specialization = { specialization_air }	
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_major = yes
+				factor = 4
+			}
+		}
+	}
+
+	reinforced_wings_mothership = {
+		allow_branch = {
+			 has_dlc = "Gotterdammerung"
+		}	
+
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_air_mothership_aircraft
+			}
+		}
+
+		is_special_project_tech = yes
+				
+		path = {
+			leads_to_tech = miniature_fighters
+			research_cost_coeff = 1
+		}	
+		research_cost = 1.75
+		start_year = 1942
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = @mothership_x_bba y = 7 }
+		}
+
+		folder = {
+			name = air_techs_folder
+			position = { x = @mothership_x y = 7 }
+		}
+
+		categories = {
+			heavy_air
+			air_equipment
+			cat_strategic_bomber
+			mio_cat_all_heavy_aircraft_and_modules
+		}
+		mothership = {
+			air_defence = 0.08
+		}
+		special_project_specialization = { specialization_air }	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	miniature_fighters = {
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_air_mothership_aircraft
+			}
+		}
+
+		is_special_project_tech = yes
+
+		path = {
+			leads_to_tech = aerial_hangars
+			research_cost_coeff = 1
+		}	
+
+		research_cost = 1.5
+		start_year = 1944
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = @mothership_x_bba y = 10 }
+		}
+
+		folder = {
+			name = air_techs_folder
+			position = { x = @mothership_x y = 10 }
+		}
+
+		categories = {
+			heavy_air
+			air_equipment
+			cat_strategic_bomber
+			mio_cat_all_heavy_aircraft_and_modules
+		}
+		special_project_specialization = { specialization_air }	
+		mothership = {
+			air_agility = 0.06
+			air_attack = 0.06
+			fuel_consumption_factor = -0.08
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	aerial_hangars = {
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_air_mothership_aircraft
+			}
+		}
+
+		is_special_project_tech = yes
+
+		research_cost = 1.75
+		start_year = 1946
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = @mothership_x_bba y = 13 }
+		}
+
+		folder = {
+			name = air_techs_folder
+			position = { x = @mothership_x y = 13 }
+		}
+
+		categories = {
+			heavy_air
+			air_equipment
+			cat_strategic_bomber
+			mio_cat_all_heavy_aircraft_and_modules
+		}
+		special_project_specialization = { specialization_air }			
+		mothership = {
+			air_agility = 0.1
+			air_range = 0.2
+			air_attack = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+###############ROCKET RAILS AND PODS#################	
+	
+	rocket_rails = {
+	
+		enable_equipment_modules = {
+		rocket_rails
+		}
+			
+		research_cost = 1
+		start_year = 1938
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = -1 y = 6 }
+		}
+		
+		categories = {
+			air_equipment
+			plane_modules_tech
+			cat_air_bombs
+			mio_cat_all_cas_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}		
+		special_project_specialization = { specialization_air }		
+		path = {
+			leads_to_tech = rocket_rails_2
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				tag = SOV
+				factor = 50
+			}
+			modifier = {
+				tag = ENG
+				factor = 50
+			}			
+		}		
+	}
+	rocket_rails_2 = {
+	
+		enable_equipment_modules = {
+		rocket_rails_2
+		}
+			
+		research_cost = 1
+		start_year = 1942
+		
+		path = {
+			leads_to_tech = bba_rocket_pods_tech
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = -1 y = 8 }
+		}
+
+		categories = {
+			air_equipment
+			plane_modules_tech
+			cat_air_bombs
+			mio_cat_all_cas_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}
+		special_project_specialization = { specialization_air }		
+	}
+	bba_rocket_pods_tech = {
+	
+		enable_equipment_modules = {
+		rocket_pods
+		}
+			
+		research_cost = 2
+		start_year = 1950
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = -1 y = 14 }
+		}
+
+		categories = {
+			air_equipment
+			plane_modules_tech
+			cat_air_bombs
+			mio_cat_all_cas_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}
+		special_project_specialization = { specialization_air }		
+	}
+	
+###############ECM TECH#################
+	
+	ecm_systems_tech = {
+
+		# radar boost in air/sea combat depends on radar level
+
+		enable_equipment_modules = { 
+			radar_warning_receiver
+			ecm_pod
+		}
+				
+		research_cost = 1.25
+		start_year = 1948
+		
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = -3 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 5
+			}
+		}
+		
+		categories = {
+			air_equipment
+			plane_modules_tech
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}
+		special_project_specialization = { specialization_air }		
+	}
+
+	
+###############NEW MG AND CANNONS#################	
+	aa_hmg_2 = {
+
+		enable_equipment_modules = {
+			imp_heavy_mg_2x
+			imp_heavy_mg_4x				
+		}
+		
+		research_cost = 1
+		start_year = 1943
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 1 y = 8 }
+		}
+		path = {
+			leads_to_tech = adv_hmg_turrets
+			research_cost_coeff = 1
+		}
+		categories = {
+			air_equipment
+			plane_modules_tech
+			cat_air_guns
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}
+		special_project_specialization = { specialization_air }		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					has_tech = improved_small_airframe
+					has_tech = improved_medium_airframe
+					has_tech = improved_large_airframe
+				}
+				factor = 5
+			}
+			modifier = {
+				OR = {
+					tag = USA
+					tag = GER
+					tag = SOV
+					tag = JAP
+				}
+				factor = 30
+			}
+		}
+	}
+	adv_hmg_turrets = {
+
+		enable_equipment_modules = {
+			adv_hmg_defense_turret_2_barrels
+			adv_hmg_defense_turret_2_barrels_2x				
+			adv_hmg_defense_turret_4_barrels
+			adv_hmg_defense_turret_4_barrels_2x	
+			adv_hmg_defense_turret_4_2_barrels
+			remote_control_turret_system			
+		}
+		
+		start_year = 1944
+		
+		research_cost = 1		
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 3 y = 9 }
+		}
+
+		categories = {
+			air_equipment
+			plane_modules_tech
+			cat_air_guns
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}
+		
+		special_project_specialization = { specialization_air }	
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				OR = {
+					has_tech = improved_large_airframe
+				}
+				factor = 5
+			}
+			
+			modifier = {
+				OR = {
+					tag = USA
+					tag = GER
+					tag = SOV
+					tag = JAP
+					tag = ENG					
+				}
+				factor = 30
+			}
+		}
+	}
+###############Radial Engines#################
+
 	radial_engines_2 = {
 
 		enable_equipment_modules = {
@@ -1603,11 +2460,16 @@ technologies = {
 			radial_engine_2_2x
 			radial_engine_2_3x
 			radial_engine_2_4x
-			radial_engine_2_6x	
+			radial_engine_2_6x
 			early_supercharger
 			early_turbocharger
 		}
-		
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_jet_engine	
+			}
+		}		
 		research_cost = 1
 		start_year = 1936
 
@@ -1632,7 +2494,7 @@ technologies = {
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
-		
+		special_project_specialization = { specialization_air }		
 		ai_will_do = {
 			factor = 5
 			
@@ -1669,7 +2531,12 @@ technologies = {
 			water_injection_medium
 			water_injection_large
 		}
-		
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_axial_jet_engine	
+			}
+		}		
 		research_cost = 1.5
 		start_year = 1940
 
@@ -1694,7 +2561,7 @@ technologies = {
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
-		
+		special_project_specialization = { specialization_air }		
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -1749,7 +2616,10 @@ technologies = {
 			name = bba_air_techs_folder
 			position = { x = 1 y = 8 }
 		}
-
+		path = {
+			leads_to_tech = sp_centrifugal_jet_tech
+			research_cost_coeff = 1
+		}
 		categories = {
 			air_equipment
 			plane_modules_tech
@@ -1761,7 +2631,7 @@ technologies = {
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
-		
+		special_project_specialization = { specialization_air }		
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -1793,272 +2663,5 @@ technologies = {
 				factor = 3
 			}			
 		}
-	}
-
-	air_torpedoe_1 = {
-		enable_equipment_modules = {
-			torpedo_mounting
-		}
-			
-		research_cost = 1
-		start_year = 1922
-
-		folder = {
-			name = bba_air_techs_folder
-			position = { x = 0 y = 2 }
-		}
-
-		path = {
-			leads_to_tech = air_torpedoe_2
-			research_cost_coeff = 1
-		}
-		
-		categories = {
-			air_equipment
-			plane_modules_tech
-			cat_air_bombs
-			mio_cat_all_naval_bomber_and_modules
-			mio_cat_all_medium_aircraft_and_modules
-			mio_cat_all_heavy_aircraft_and_modules
-			mio_cat_all_light_aircraft_and_modules
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = iw_small_airframe
-					has_tech = iw_medium_airframe
-					has_tech = iw_large_airframe
-				}
-				factor = 5
-			}
-		}
-	}
-
-	air_torpedoe_2 = {
-		enable_equipment_modules = {
-			torpedo_mounting_2
-		}
-			
-		research_cost = 1
-		start_year = 1940
-
-		folder = {
-			name = bba_air_techs_folder
-			position = { x = 0 y = 6 }
-		}
-
-		path = {
-			leads_to_tech = air_torpedoe_3
-			research_cost_coeff = 1
-		}
-		
-		categories = {
-			air_equipment
-			plane_modules_tech
-			cat_air_bombs
-			mio_cat_all_naval_bomber_and_modules
-			mio_cat_all_medium_aircraft_and_modules
-			mio_cat_all_heavy_aircraft_and_modules
-			mio_cat_all_light_aircraft_and_modules
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = iw_small_airframe
-					has_tech = iw_medium_airframe
-					has_tech = iw_large_airframe
-				}
-				factor = 5
-			}
-		}
-	}
-
-	air_torpedoe_3 = {
-		enable_equipment_modules = {
-			torpedo_mounting_3
-		}
-			
-		research_cost = 1
-		start_year = 1944
-
-		folder = {
-			name = bba_air_techs_folder
-			position = { x = 0 y = 10 }
-		}
-
-		categories = {
-			air_equipment
-			plane_modules_tech
-			cat_air_bombs
-			mio_cat_all_naval_bomber_and_modules
-			mio_cat_all_medium_aircraft_and_modules
-			mio_cat_all_heavy_aircraft_and_modules
-			mio_cat_all_light_aircraft_and_modules
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = iw_small_airframe
-					has_tech = iw_medium_airframe
-					has_tech = iw_large_airframe
-				}
-				factor = 5
-			}
-		}
-	}
-
-	range_improvements = {
-
-		enable_equipment_modules = {
-			fuel_tanks_small
-			fuel_tanks_medium
-			fuel_tanks_large
-			drop_tanks
-			drop_tanks_medium
-		}
-		
-		research_cost = 1
-		start_year = 1936
-
-		folder = {
-			name = bba_air_techs_folder
-			position = { x = -5 y = 4 }
-		}
-
-		categories = {
-			air_equipment
-			plane_modules_tech
-			mio_cat_all_light_fighter_and_modules
-			mio_cat_all_cas_and_modules
-			mio_cat_all_naval_bomber_and_modules
-			mio_cat_all_medium_aircraft_and_modules
-			mio_cat_all_heavy_aircraft_and_modules
-			mio_cat_all_light_aircraft_and_modules
-		}
-		
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				is_major = yes
-				factor = 100
-			}
-			modifier = {
-				num_of_military_factories < 10
-				factor = 0
-			}
-			modifier = {
-				date > "1937.1.1"
-				factor = 1.5
-			}
-			modifier = {
-				date > "1938.1.1"
-				factor = 1.5
-			}
-			modifier = {
-				date > "1939.1.1"
-				factor = 3
-			}
-			modifier = {
-				OR = {
-					tag = USA
-					tag = JAP
-				}
-				factor = 3
-			}
-		}
-	}
-
-	aircraft_construction = {
-
-		enable_equipment_modules = {
-			dive_brakes_small
-			dive_brakes_medium
-			non_strategic_materials_small
-			floats
-			non_strategic_materials_medium
-			flying_boat_medium
-			non_strategic_materials_large
-			flying_boat_large
-			pressurized_cockpit	
-			aircraft_lightweight_construction_small	
-			aircraft_lightweight_construction_medium
-			aircraft_reinforced_construction_small
-			aircraft_reinforced_construction_medium
-			aircraft_reinforced_construction_large			
-			aerodynamic_pylons_small
-			aerodynamic_pylons_medium			
-			cargo_bay
-			supply_drops
-			troop_compartment			
-			NACA_cowling			
-		}
-		
-		research_cost = 1
-		start_year = 1922
-
-		folder = {
-			name = bba_air_techs_folder
-			position = { x = -2 y = 2 }
-		}
-
-		path = {
-			leads_to_tech = range_improvements
-			research_cost_coeff = 1
-		}
-		
-		path = {
-			leads_to_tech = survivability_studies
-			research_cost_coeff = 1
-		}
-
-		categories = {
-			air_equipment
-			plane_modules_tech
-			mio_cat_all_light_fighter_and_modules
-			mio_cat_all_cas_and_modules
-			mio_cat_all_naval_bomber_and_modules
-			mio_cat_all_medium_aircraft_and_modules
-			mio_cat_all_heavy_aircraft_and_modules
-			mio_cat_all_light_aircraft_and_modules
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_major = yes
-				factor = 100
-			}			
-		}
-	}
-
-	suicide_charge = {
-
-		enable_equipment_modules = {
-			fixed_explosive_charge
-		}
-				
-		research_cost = 1.5 #Carrier Variant
-		start_year = 1944
-
-		# only from focus!!! #####
-		allow = {
-			always = no
-		}
-
-		#folder = {
-		#	name = air_techs_folder
-		#	position = { x = -2 y = 8 }
-		#}
-		
-		ai_will_do = {
-			factor = 0
-		}
-		################
-	}
-}
+	}	
+    }
