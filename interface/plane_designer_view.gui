@@ -20,13 +20,13 @@ guiTypes = {
 		iconType ={
 			name ="experience_bg"
 			spriteType = "GFX_generic_box_smallest"
-			position = { x = 298 y = 507 }
+			position = { x = 338 y = 507 }
 			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
 			name = "experience"
-			position = { x = 295 y = 510 }
+			position = { x = 335 y = 510 }
 			font = "hoi_18mbs"
 			maxWidth = 70
 			maxHeight = 20
@@ -37,13 +37,13 @@ guiTypes = {
 
 		iconType = {
 			name = "select_model"
-			position = { x=956 y=283 }
+			position = { x=554 y=402 }
 			quadTextureSprite = "GFX_3d_view_placeholder"
 		}
 		
 		containerWindowType = {
 			name = "border_container"
-			position = { x=953 y=280 }
+			position = { x=554 y=400 }
 			size = { width = 111 height = 58 }
 
 			background = {
@@ -57,7 +57,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "icon_selection_container"
-			position = { x=305 y=73 }
+			position = { x=340 y=73 }
 			size = { width = 180 height = 62 }
 
 			background = {
@@ -218,33 +218,62 @@ guiTypes = {
 			}
 			positionType = {
 				name = "pos_custom_module_slot_window_8"
+				position = { x=@fixed_btn_mod_col_0 y=@fixed_btn_mod_row_2 }
+			}
+			positionType = {
+				name = "pos_custom_module_slot_window_9"
 				position = { x=@fixed_btn_mod_col_1 y=250 }
 			}			
 		}
-
+		
+		iconType = {
+			name = "nubbin"
+			quadTextureSprite ="GFX_tank_designer_nubbin"
+			position = { x=300 y =74 }
+			scale = 1.0
+		}
+		
+		buttonType = {
+			name = "dynamic_version_checkbox_button"
+			position = { x=310 y=63 }
+			quadTextureSprite ="GFX_generic_checkbox3"
+			pdx_tooltip = "EQUIPMENT_DESIGNER_DYNAMIC_VERSION_CHECKBOX_BUTTON_DESC"
+			clicksound = click_checkbox
+			frame = 1
+		}
+		
 		iconType = {
 			name = "tag_icon_bg"
 			spriteType = "GFX_role_icon_bg"
-			position = { x = 482 y = 72 }
+			position = { x = 25 y = 343 }
 			alwaystransparent = yes
 		}
-
+		
 		buttonType = {
 			name = "niche_button"
-			position = { x = 490 y = 80 }
+			position = { x = 35 y = 350 }
 			spriteType = "GFX_plane_niche_icon_strip"
 			clicksound = "ui_tank_designer_company_icon"
 			pdx_tooltip = "DESIGNER_SELECT_NICHE"
 			pdx_tooltip_delayed = "DESIGNER_SELECT_NICHE_AIR_DELAYED"
 		}
-
+		
+		ButtonType = {
+			name = "save_to_file_button"
+			position = { x = 272 y = 504 }
+			quadTextureSprite ="GFX_preset_button_save"
+			buttonFont = "hoi_18mbs"
+			clicksound = "ui_ship_designer_save"
+			pdx_tooltip = "SAVE_AS_PRESET_TOOLTIP"
+		}
+		
 		ButtonType = {
 			name = "historical_design_button"
-			position = { x=170 y=404 }
-			quadTextureSprite ="GFX_button_123x34"
-			buttonText = "HISTORICAL_PRESET"
+			position = { x = 302 y = 504 }
+			quadTextureSprite ="GFX_preset_button_open"
 			buttonFont = "hoi_18mbs"
 			#clicksound = "ui_tank_designer_save"
+			pdx_tooltip = "OPEN_PRESETS_TOOLTIP"
 		}
 		
 		iconType = {
@@ -287,7 +316,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "base_stats"
 				position = { x = 10 y = 55 }
-				size = { width = 171 height = 224 }
+				size = { width = 171 height = 166 }
 				clipping = yes
 
 				background = {
@@ -321,7 +350,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "combat_stats"
 				position = { x = 183 y = 55 }
-				size = { width = 174 height = 224 }
+				size = { width = 174 height = 166 }
 				clipping = yes
 
 				background = {
@@ -355,7 +384,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "misc_stats"
 				position = { x = 356 y = 55 }
-				size = { width = 172 height = 224 }
+				size = { width = 172 height = 166 }
 				clipping = yes
 
 				background = {
@@ -377,7 +406,7 @@ guiTypes = {
 
 			instantTextboxType = {
 				name = "combat_adjuster_header_label"
-				position = { x = 30 y = 313 }
+				position = { x = 30 y = 236 }
 				font = "hoi_18mbs"
 				text = "PRODUCTION_ADJUSTERS_LABEL"
 				maxWidth = 140
@@ -387,8 +416,8 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "adjuster_stats"
-				position = { x = 15 y = 340 }
-				size = { width = 515 height = 139 }
+				position = { x = 15 y = 263 }
+				size = { width = 515 height = 100 }
 				clipping = yes
 				verticalScrollbar = "right_vertical_slider"
 				scroll_wheel_factor = 63
@@ -538,10 +567,10 @@ guiTypes = {
 				}
 			}
 		}
-
+		
 		containerWindowType = {
 			name = "historical_select_design"
-			position = { x=538 y=55 }
+			position = { x=538 y=40 }
 			size = { width=567 height=460 }
 			
 			
@@ -550,7 +579,25 @@ guiTypes = {
 				spriteType ="GFX_tiled_window"
 				position = { x=-16 y=0 }
 			}
-
+			
+			ButtonType = {
+				name = "import_preset_button"
+				position = { x=34 y=408 }
+				quadTextureSprite ="GFX_preset_button_import"
+				buttonFont = "hoi_18mbs"
+				clicksound = "ui_ship_designer_save"
+				pdx_tooltip = "IMPORT_PRESET_TOOLTIP"
+			}
+			
+			ButtonType = {
+				name = "export_preset_folder_button"
+				position = { x=2 y=408 }
+				quadTextureSprite ="GFX_preset_button_export"
+				buttonFont = "hoi_18mbs"
+				clicksound = "ui_ship_designer_save"
+				pdx_tooltip = "EXPORT_PRESET_FOLDER_TOOLTIP"
+			}
+			
 			buttonType = {
 				name = "back_button"
 				position = { x=395 y=406 }
@@ -560,11 +607,11 @@ guiTypes = {
 				quadTextureSprite = "GFX_button_123x34"
 				clicksound = click_close
 			}		
-
+			
 			containerWindowType = {
 				name = "border_container"
-				position = { x=20 y=20 }
-				size = { width = 495 height = 380 }
+				position = { x=0 y=20 }
+				size = { width = 530 height = 380 }
 				
 				background = {
 					name ="bg_tech_button"
@@ -598,11 +645,46 @@ guiTypes = {
 					
 				}
 			}
+			
+			containerWindowType = {
+				name = "folder_container"
+				position = {x=3 y=28}
+				size = {width=148 height=370}
+				verticalScrollbar = "left_vertical_slider"
+				scroll_wheel_factor = 80
+				smooth_scrolling = yes
+				margin = {top=0 left=0 bottom=9 right=0}
+
+				background = {
+					name = "Background" 
+					spriteType ="GFX_tiled_paper_bg2"
+				}
+				
+				ButtonType = {
+					name = "show_all_button"
+					position = { x=12 y=6 }
+					quadTextureSprite ="GFX_diplo_filter_entry"
+					buttonFont = "hoi_18mbs"
+					pdx_tooltip = "SHOW_ALL_CUSTOM_DESIGNS_TOOLTIP"
+					text = "BUTTON_SHOW_ALL_DESIGNS"
+					frame = 2
+				}
+				
+				gridBoxType = {
+					name = "list"
+					position = {x=12 y=42}
+					size = {width=40 height=170}
+					slotsize = {width=40 height=36}
+					max_slots_horizontal = 1
+					format = "UPPER_RIGHT"
+				}
+			}
+			
 		}
 		
 		containerWindowType = {
 			name = "niche_icon_selector"
-			position = { x=515 y=70 }
+			position = { x = 35 y = 350 }
 			size = { width=315 height=55 }
 			
 			background = {
@@ -673,10 +755,10 @@ guiTypes = {
 			clicksound = click_checkbox
 			frame = 1
 		}
-
+		
 		ButtonType = {
 			name = "save_button"
-			position = { x=400 y=502 }
+			position = { x=410 y=502 }
 			quadTextureSprite ="GFX_button_123x34"
 			buttonText = "EQUIPMENT_DESIGNER_SAVE"
 			buttonFont = "hoi_18mbs"
@@ -704,15 +786,7 @@ guiTypes = {
 				name = "name"
 				position = { x = 35 y = 5 }
 				font = "hoi_18mbs"
-				size = { x=220 y=20 }
-			}
-
-			buttonType = {
-				name = "name_reset"
-				position = { x = -31 y = -1 }
-				quadTextureSprite ="GFX_NV_btn_reset"
-				clicksound = "ui_tank_designer_reset"
-				orientation = "upper_right"
+				size = { x=178 y=20 }
 			}
 
 			iconType = {
@@ -720,6 +794,14 @@ guiTypes = {
 				spriteType = "GFX_tank_design_icon"
 				position = { x = 5 y = 1 }
 				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "name_reset"
+				position = { x = 2 y = -1 }
+				quadTextureSprite ="GFX_NV_btn_reset"
+				clicksound = "ui_tank_designer_reset"
+				orientation = "upper_left"
 			}
 
 			expandedWindow = {
@@ -752,6 +834,18 @@ guiTypes = {
 
 				}
 			}
+		}
+		
+		instantTextboxType = {
+			name = "position_version"
+			position = { x = 220 y = 65 }
+			font = "hoi_18mbs"
+			text_color_code = g
+			maxWidth = 71
+			maxHeight = 20
+			alwaystransparent = yes
+			multiline = no
+			format = right
 		}
 
 		# chassi name
@@ -831,7 +925,6 @@ guiTypes = {
 			font = "hoi_18mbs"
 			maxWidth = 90
 			maxHeight = 25
-			pdx_tooltip = "EQUIPMENT_DESIGNER_PRODUCTION_RESOURCE_DESC"
 			format = left
 		}
 
