@@ -30,6 +30,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
+	spriteType = {
+		name = "GFX_TC_small_plane_airframe_5"
+		textureFile = "gfx/interface/equipmentdesigner/planes/generic/generic_fighter_5.dds"
+		legacy_lazy_load = no
+	}
+
 	# generic small_plane_cas_airframe
 
 	spriteType = {
@@ -175,6 +181,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TC_large_plane_airframe_4"
 		textureFile = "gfx/interface/equipmentdesigner/planes/generic/generic_strat_bomber_4.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_large_plane_airframe_5"
+		textureFile = "gfx/interface/equipmentdesigner/planes/generic/generic_strat_bomber_5.dds"
 		legacy_lazy_load = no
 	}
 
@@ -376,6 +387,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TC_large_plane_airframe_4_eng"
 		textureFile = "gfx/interface/equipmentdesigner/planes/eng/eng_strat_bomber_4.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_large_plane_airframe_5_eng"
+		textureFile = "gfx/interface/equipmentdesigner/planes/eng/eng_strat_bomber_5.dds"
 		legacy_lazy_load = no
 	}
 
@@ -584,6 +600,11 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/planes/fra/fra_strat_bomber_4.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_TC_large_plane_airframe_5_fra"
+		textureFile = "gfx/interface/equipmentdesigner/planes/fra/fra_strat_bomber_5.dds"
+		legacy_lazy_load = no
+	}
 
 	# fra large_plane_maritime_patrol_plane_airframe
 
@@ -790,6 +811,11 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/planes/ger/ger_strat_bomber_4.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_TC_large_plane_airframe_5_ger"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ger/ger_strat_bomber_5.dds"
+		legacy_lazy_load = no
+	}
 
 	# ger large_plane_maritime_patrol_plane_airframe
 
@@ -989,6 +1015,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TC_large_plane_airframe_2_ita"
 		textureFile = "gfx/interface/equipmentdesigner/planes/ita/ita_strat_bomber_2.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_large_plane_airframe_5_ita"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ita/ita_strat_bomber_5.dds"
 		legacy_lazy_load = no
 	}
 
@@ -1192,6 +1223,11 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/planes/jap/jap_strat_bomber_4.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_TC_large_plane_airframe_5_jap"
+		textureFile = "gfx/interface/equipmentdesigner/planes/jap/jap_strat_bomber_5.dds"
+		legacy_lazy_load = no
+	}
 
 	# jap large_plane_maritime_patrol_plane_airframe
 
@@ -1391,6 +1427,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TC_large_plane_airframe_4_sov"
 		textureFile = "gfx/interface/equipmentdesigner/planes/sov/sov_strat_bomber_4.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_large_plane_airframe_5_sov"
+		textureFile = "gfx/interface/equipmentdesigner/planes/sov/sov_strat_bomber_5.dds"
 		legacy_lazy_load = no
 	}
 
@@ -1653,6 +1694,236 @@ spriteTypes = {
 		name = "GFX_TC_medium_plane_naval_bomber_airframe_4"
 		textureFile = "gfx/interface/equipmentdesigner/planes/generic/generic_medium_naval_bomber_4.dds"
 		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_plane_naval_bomber_airframe_1_SOV"
+		textureFile = "gfx/interface/equipmentdesigner/planes/sov/SOV_medium_naval_bomber_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_plane_naval_bomber_airframe_2_SOV"
+		textureFile = "gfx/interface/equipmentdesigner/planes/sov/SOV_medium_naval_bomber_2.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_plane_naval_bomber_airframe_3_SOV"
+		textureFile = "gfx/interface/equipmentdesigner/planes/sov/SOV_medium_naval_bomber_3.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_plane_naval_bomber_airframe_4_SOV"
+		textureFile = "gfx/interface/equipmentdesigner/planes/sov/SOV_medium_naval_bomber_4.dds"
+		legacy_lazy_load = no
 	}	
-	
+####Transports###
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1"
+		textureFile = "gfx/interface/equipmentdesigner/planes/generic/generic_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2"
+		textureFile = "gfx/interface/equipmentdesigner/planes/generic/generic_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3"
+		textureFile = "gfx/interface/equipmentdesigner/planes/generic/generic_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1_USA"
+		textureFile = "gfx/interface/equipmentdesigner/planes/usa/USA_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2_USA"
+		textureFile = "gfx/interface/equipmentdesigner/planes/usa/USA_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3_USA"
+		textureFile = "gfx/interface/equipmentdesigner/planes/usa/USA_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1_SOV"
+		textureFile = "gfx/interface/equipmentdesigner/planes/sov/SOV_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2_SOV"
+		textureFile = "gfx/interface/equipmentdesigner/planes/sov/SOV_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3_SOV"
+		textureFile = "gfx/interface/equipmentdesigner/planes/sov/SOV_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1_GER"
+		textureFile = "gfx/interface/equipmentdesigner/planes/GER/GER_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2_GER"
+		textureFile = "gfx/interface/equipmentdesigner/planes/GER/GER_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3_GER"
+		textureFile = "gfx/interface/equipmentdesigner/planes/GER/GER_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1_ENG"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ENG/ENG_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2_ENG"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ENG/ENG_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3_ENG"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ENG/ENG_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1_RAJ"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ENG/ENG_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2_RAJ"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ENG/ENG_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3_RAJ"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ENG/ENG_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1_MAL"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ENG/ENG_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2_MAL"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ENG/ENG_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3_MAL"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ENG/ENG_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1_SAF"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ENG/ENG_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2_SAF"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ENG/ENG_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3_SAF"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ENG/ENG_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1_CAN"
+		textureFile = "gfx/interface/equipmentdesigner/planes/usa/USA_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2_CAN"
+		textureFile = "gfx/interface/equipmentdesigner/planes/usa/USA_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3_CAN"
+		textureFile = "gfx/interface/equipmentdesigner/planes/usa/USA_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1_AST"
+		textureFile = "gfx/interface/equipmentdesigner/planes/usa/USA_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2_AST"
+		textureFile = "gfx/interface/equipmentdesigner/planes/usa/USA_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3_AST"
+		textureFile = "gfx/interface/equipmentdesigner/planes/usa/USA_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1_NZL"
+		textureFile = "gfx/interface/equipmentdesigner/planes/usa/USA_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2_NZL"
+		textureFile = "gfx/interface/equipmentdesigner/planes/usa/USA_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3_NZL"
+		textureFile = "gfx/interface/equipmentdesigner/planes/usa/USA_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1_FRA"
+		textureFile = "gfx/interface/equipmentdesigner/planes/FRA/FRA_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2_FRA"
+		textureFile = "gfx/interface/equipmentdesigner/planes/FRA/FRA_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3_FRA"
+		textureFile = "gfx/interface/equipmentdesigner/planes/FRA/FRA_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1_ITA"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ITA/ITA_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2_ITA"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ITA/ITA_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3_ITA"
+		textureFile = "gfx/interface/equipmentdesigner/planes/ITA/ITA_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_1_JAP"
+		textureFile = "gfx/interface/equipmentdesigner/planes/JAP/JAP_transport_plane_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_2_JAP"
+		textureFile = "gfx/interface/equipmentdesigner/planes/JAP/JAP_transport_plane_2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_TC_medium_transport_plane_airframe_3_JAP"
+		textureFile = "gfx/interface/equipmentdesigner/planes/JAP/JAP_transport_plane_3.dds"
+		legacy_lazy_load = no
+	}	
 }

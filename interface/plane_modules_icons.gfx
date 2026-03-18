@@ -112,27 +112,27 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_EMI_jet_engine_1x"
-		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_jet_engine_1_icon.dds"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/jet_engine_1x.dds" #Previously used airplane_jet_engine_1_icon.dds
 		legacy_lazy_load = no
 	}
 	spriteType = {
 		name = "GFX_EMI_jet_engine_2x"
-		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_jet_engine_2_icon.dds"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/jet_engine_2x.dds" #Previously used airplane_jet_engine_2_icon.dds
 		legacy_lazy_load = no
 	}
 	spriteType = {
 		name = "GFX_EMI_jet_engine_3x"
-		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_jet_engine_3_icon.dds"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/jet_engine_3x.dds" #Previously used airplane_jet_engine_3_icon.dds
 		legacy_lazy_load = no
 	}
 	spriteType = {
 		name = "GFX_EMI_jet_engine_4x"
-		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_jet_engine_4_icon.dds"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/jet_engine_4x.dds" #Previously used airplane_jet_engine_4_icon.dds
 		legacy_lazy_load = no
 	}
 	spriteType = {
 		name = "GFX_EMI_jet_engine_6x"
-		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_jet_engine_6_icon.dds"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/jet_engine_6x.dds" #Previously used airplane_jet_engine_6_icon.dds
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -470,9 +470,14 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_EMI_plane_special_module_defense_turret"
-		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_lmg_turret_2_icon.dds"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_defense_turret.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_EMI_plane_special_module_defense_turret_x2"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_defense_turret_x2.dds"
+		legacy_lazy_load = no
+	}	
 	spriteType = {
 		name = "GFX_EMI_mine_warfare_defense"
 		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_demining_coil_icon.dds"
@@ -609,6 +614,61 @@ spriteTypes = {
 		noOfFrames = 8
 	}
 
+
+
+		####          ####  ####          ####
+		 ##            ##    ##            ##
+		 ##            ##    ##            ##
+		 ##            ##    ##            ##
+		 ##    ####    ##    ##    ####    ##
+          ##    ##    ##      ##    ##    ##
+	       ##   ##   ##   # #  ##   ##   ##
+            ####  ####    ###   ####  ####
+
+
+
+	#### SP-RELATED MODULES ####
+
+	spriteType = {
+		name = "GFX_EMI_jet_engine_axial_1x"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/jet_engine_axial_1x.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_jet_engine_axial_2x"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/jet_engine_axial_2x.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_jet_engine_axial_3x"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/jet_engine_axial_3x.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_jet_engine_axial_4x"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/jet_engine_axial_4x.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_jet_engine_axial_6x"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/jet_engine_axial_6x.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_improved_rocket_propelled_bombs"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/improved_rocket_propelled_bombs.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_rocket_propelled_bombs"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/rocket_propelled_bombs_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_earthshaker_bomb_release"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/earthshaker_bomb_release.dds"
+		legacy_lazy_load = no
+	}
 ###########NEW Modules###############
 
 	spriteType = {
@@ -972,6 +1032,10 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_EMSI_fixed_auxiliary_weapon_slot_4"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_drop_tanks_wings.dds"
+	}	
+	spriteType = {
 		name = "GFX_EMSI_special_type_slot_7"
 		textureFile = "gfx/interface/equipmentdesigner/planes/modules/slot_construction.dds"
 	}
@@ -995,6 +1059,10 @@ spriteTypes = {
 		name = "GFX_EMSI_fixed_auxiliary_weapon_slot_8"
 		textureFile = "gfx/interface/equipmentdesigner/planes/modules/slot_turrets.dds"
 	}
+	spriteType = {
+		name = "GFX_EMSI_fixed_auxiliary_weapon_slot_9"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/slot_canopy.dds"
+	}	
 	spriteType = {
 		name = "GFX_EMI_cas_reflex_gunsight_1"
 		textureFile = "gfx/interface/equipmentdesigner/planes/modules/cas_reflex_gunsight_1_icon.dds"
@@ -1035,6 +1103,41 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/planes/modules/cargo_category.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_EMI_plane_special_module_fighter_canopy"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_fighter_canopy.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_plane_special_module_drop_tanks"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_drop_tanks.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_plane_special_module_countermeasures"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_countermeasures.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_plane_special_module_cas_gunsight"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_cas_gunsight.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_plane_special_module_fighter_gunsight"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_fighter_gunsight.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_plane_special_module_strat_bombsight"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_strat_bombsight.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_plane_special_module_naval_sight"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_naval_sight.dds"
+		legacy_lazy_load = no
+	}	
 	spriteType = {
 		name = "GFX_EMI_torpedo_mounting"
 		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_torpedo_1.dds"
@@ -1078,6 +1181,215 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_EMI_plane_special_module_radial_engine"
 		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_radial_engine.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_open_canopy"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_open_canopy.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_birdcage_canopy"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_birdcage_canopy.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_malcom_hood_canopy"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_malcom_hood_canopy.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_bubble_canopy"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_bubble_canopy.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_bba_aa_rocket"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_aa_rocket.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_ecm_pod"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_ecm_pod.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_basic_radar_jammer"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_basic_radar_jammer.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_radar_warning_receiver"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_radar_warning_receiver.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tail_warning_radar"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_tail_warning_radar.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_bba_fox2_rocket"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_fox2_rocket.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_bba_fox1_rocket"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_fox1_rocket.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_bba_fox1_rocket"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_fox1_rocket.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_rocket_pods"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_rocket_pods_icon.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_torpedo_basic_sight"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/torpedo_basic_sight_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_torpedo_director_sight_1"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/torpedo_director_sight_1_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_torpedo_director_sight_2"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/torpedo_director_sight_2_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_armored_windscreen"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/armored_windscreen_icon.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_armored_windscreen_medium"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/armored_windscreen_medium_icon.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_armored_windscreen_large"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/armored_windscreen_large_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_adv_hmg_defense_turret_2_barrels"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_adv_hmg_turret_2b_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_adv_hmg_defense_turret_2_barrels_2x"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_adv_hmg_turret_2b_x2_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_adv_hmg_defense_turret_4_barrels"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_adv_hmg_turret_4b_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_adv_hmg_defense_turret_4_barrels_2x"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_adv_hmg_turret_4b_x2_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_adv_hmg_defense_turret_4_2_barrels"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_adv_hmg_turret_4b2b_x2_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_plane_special_module_centralised_defense_turret"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_centralised_defense_turret.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_plane_special_module_centralised_defense_turret_x2"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_centralised_defense_turret_x2.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_imp_turret_sights"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_imp_turret_sights_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_imp_turret_servos_system"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_imp_turret_servos_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_rear_lmg_post"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_rear_lmg_post.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_rear_hmg_post"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_rear_hmg_post.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_drop_tanks_75"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/drop_tanks_75_icon.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_drop_tanks_108"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/drop_tanks_108_icon.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_drop_tanks_165"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/drop_tanks_165_icon.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_drop_tanks_75_x2"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/drop_tanks_75_x2_icon.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_drop_tanks_108_x2"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/drop_tanks_108_x2_icon.dds"
+		legacy_lazy_load = no
+	}		spriteType = {
+		name = "GFX_EMI_drop_tanks_165_x2"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/drop_tanks_165_x2_icon.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_incendiary_bombs_medium"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_incendiary_bombs_medium_icon.dds"
+		legacy_lazy_load = no
+	}		
+	spriteType = {
+		name = "GFX_EMI_incendiary_bombs_strat"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/bba_incendiary_bombs_large_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_jet_assisted_take_off"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/jet_assisted_take_off_icon.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_imp_jet_assisted_take_off"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/imp_jet_assisted_take_off_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_plane_special_module_rocket_boosters"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_special_module_rocket_boosters.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_radar_assisted_gunsight"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/radar_assisted_gunsight_icon.dds"
 		legacy_lazy_load = no
 	}	
 }
